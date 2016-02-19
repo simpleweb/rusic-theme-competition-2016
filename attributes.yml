@@ -1,0 +1,23 @@
+ga_code:
+  value: ""
+  help_text: "Your Google Anylitics tracking code. Should look something like this UA-12345678-9"
+after_enter_text:
+  value: "Thank you for entering!"
+  help_text: "Maecenas faucibus mollis interdum."
+  type: "wysiwyg"
+referal_guide:
+  value: "<em>Increase your chance of winning</em> by sharing this competition with friends!</em>"
+  help_text: "Maecenas faucibus mollis interdum."
+  type: "wysiwyg"
+referal_multiplier:
+  value: 3
+  help_text: "Maecenas faucibus mollis interdum."
+  type: "number"
+primary_color:
+  value: "#59A7FF"
+  help_text: "Maecenas faucibus mollis interdum."
+  type: "color"
+primary_image:
+  value: "http://www.planwallpaper.com/static/images/abstract-wallpaper-20.jpg"
+  help_text: "Maecenas faucibus mollis interdum."
+  type: "file"

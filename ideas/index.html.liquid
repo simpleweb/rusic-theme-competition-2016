@@ -1,0 +1,22 @@
+<br>
+
+{% if space.guest_ideas %}
+  {% include "new" %}
+{% elsif current_participant %}
+  {% include "new" %}
+{% else %}
+  {% if space.guest_ideas %}
+    <h1>Win tickets to Bath Ruby</h1>
+    <p>The conference takes place on the 11 March 2016 at the Assembly Rooms in Bath and Simpleweb are giving away a ticket to one lucky winner!</p>
+    <a href="/ideas/new" class="button">Enter now</a>
+  {% else %}
+    <h1>Sign in to enter the competition</h1>
+    <div>
+      <a href="/auth/twitter"><img width="264" src="{{ 'sign_in_twitter.png' | image_url }}" alt="Sign in with Twitter"></a>
+    </div>
+    <br>
+    <div>
+      <a href="/auth/facebook"><img width="264" src="{{ 'sign_in_facebook.png' | image_url }}" alt="Sign in with Facebook"></a>
+    </div>
+  {% endif %}
+{% endif %}

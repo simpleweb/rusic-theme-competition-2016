@@ -1,0 +1,42 @@
+{% capture referral_link %}http://{{host}}{{idea.referral_link}}{% endcapture %}
+
+<p>
+  <span class="subtle">{{ space.after_enter_text }}</span>
+</p>
+
+<h1>You have {{ idea.referrals | times:space.referal_multiplier | plus:1 | pluralize: 'entry', 'entries' }}</h1>
+
+<p>{{ space.referal_guide }}</p>
+
+<div class="addthis_sharing_toolbox"></div>
+
+<p>
+  <span class="subtle">or share this link anywhere:</span>
+</p>
+
+<div class="input-with-button-appended">
+  <input id="referral_link" type="text" value="http://{{host}}{{idea.referral_link}}" readonly>
+  <a id="referral_link_button" href="#" class="button js-clipboard" data-clipboard-target="#referral_link">Copy</a>
+</div>
+
+<p>Each referral gives you <b>{{ space.referal_multiplier }} more entires.</b></p>
+
+<script>
+  window.addthis_share = {
+    url: "http://{{host}}{{idea.referral_link}}",
+    passthrough: {
+      facebook: {
+        text: "I've entered to win a ticket to Bath Ruby & you should too."
+      },
+      pinterest: {
+        text: "I've entered to win a ticket to Bath Ruby & you should too."
+      },
+      google: {
+        text: "I've entered to win a ticket to Bath Ruby & you should too."
+      },
+      twitter: {
+        text: "I've entered to win a ticket to Bath Ruby & you should too."
+      }
+    }
+  }
+</script>

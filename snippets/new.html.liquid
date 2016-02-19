@@ -1,0 +1,79 @@
+<h2>Enter your details below</h2>
+
+<form action="{{space.permalink}}/ideas" method="post" enctype="multipart/form-data" role="form">
+
+
+  <div>
+    <label class="visuallyhidden">First name</label>
+    <input type="text" name="idea[custom][first_name]" placeholder="First name">
+  </div>
+
+  <div>
+    <label class="visuallyhidden">Last name</label>
+    <input type="text" name="idea[custom][surname]" placeholder="Last name">
+  </div>
+
+  <div>
+    <label class="visuallyhidden">Email address</label>
+    <input type="text" name="idea[custom][email]" placeholder="Email address">
+  </div>
+
+  <div>
+    <div>
+      <label>Date of birth</label>
+    </div>
+    <select name="idea[custom][dob(1i)]">
+      {% for i in (1..31) %}
+        <option value="{{ i }}">{{ i }}</option>
+      {% endfor %}
+    </select>
+
+    <select name="idea[custom][dob(2i)]">
+      <option value="January">January</option>
+      <option value="Febuary">Febuary</option>
+      <option value="March">March</option>
+      <option value="April">April</option>
+      <option value="May">May</option>
+      <option value="June">June</option>
+      <option value="July">July</option>
+      <option value="August">August</option>
+      <option value="September">September</option>
+      <option value="October">October</option>
+      <option value="November">November</option>
+      <option value="December">December</option>
+    </select>
+
+    {% assign max_year = 'now' | date: "%Y" %}
+    {% assign default_year = max_year | minus: 20 %}
+
+    <select value="{{ default_year }}" name="idea[custom][dob(3i)]">
+      {% for year in (1900..max_year) reversed %}
+        <option value="{{ year }}" {% if year == default_year %}selected{% endif %}>{{ year }}</option>
+      {% endfor %}
+    </select>
+  </div>
+
+  <div>
+    <label class="visuallyhidden">Gender</label>
+    <input type="radio" value="male" name="idea[custom][gender]"> Male
+    <input type="radio" value="female" name="idea[custom][gender]"> Female
+  </div>
+
+  <br>
+
+  <div>
+    <small>
+      <a href="#">Terms &amp; conditions</a>
+    </small>
+  </div>
+
+  <br>
+
+  <input type="submit" class="button" value="Send Entry">
+
+  <div>
+    <small>
+      Entry closes midnight 4th March 2016.
+    </small>
+  </div>
+</form>
