@@ -20,16 +20,17 @@
     </script>
 
     <style>
-      body { background: {{ space.primary_color }}; }
+      body { background: {{ space.secondary_color }}; }
       .button { background: {{ space.primary_color }}; }
-      .card--image {
-        background-image: url({{ space.primary_image }});
+      .card--image__wrap__content {
+        /*background-image: url({{ space.primary_image }});*/
+        background-color: {{ space.primary_color }};
       }
 
       {% if space.mobile_primary_image %}
         @media only screen and (max-width: 750px) {
-          .card--image {
-            background-image: url({{ space.mobile_primary_image }});
+          .card--image__wrap__content {
+            /*background-image: url({{ space.mobile_primary_image }});*/
           }
         }
       {% endif %}
@@ -40,9 +41,13 @@
 
     <div class="wrapper">
       <div class="card">
-        <div class="card--image"></div>
+        <div class="card--image">
+          <div class="card--image__wrap">
+            <div class="card--image__wrap__content"></div>
+          </div>
+        </div>
         <div class="card--body">
-          <div>
+          <div class="card--body__content">
              {{ content_for_layout }}
           </div>
         </div>

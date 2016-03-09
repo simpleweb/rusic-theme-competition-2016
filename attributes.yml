@@ -41,7 +41,11 @@ custom_attribute_collections:
     attributes:
       primary_color:
         value: "#59A7FF"
-        help_text: Your base color. Used for the background.
+        help_text: Your base color.
+        type: color
+      secondary_color:
+        value: "#254359"
+        help_text: Used for the background.
         type: color
       primary_image:
         value: http://www.planwallpaper.com/static/images/abstract-wallpaper-20.jpg

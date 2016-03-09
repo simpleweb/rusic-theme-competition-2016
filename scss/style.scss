@@ -46,39 +46,108 @@ body {
   font-smoothing: antialiased;
   -webkit-font-smoothing: antialiased;
   line-height: 1.3em;
+  background: #4a4a4a;
 }
 
 .card {
-  width: 700px;
-  height: 450px;
+  width: 720px;
+  height: 480px;
   background: #F6F6F6;
   position: relative;
-  overflow: hidden;
-  left: -1px;
-  top: -1px;
+
+  @media only screen and (min-width: 750px) {
+
+    &:before {
+      position: absolute;
+      bottom: 100%;
+      left: -20.2%;
+      right: 0;
+      height: 2500px;
+      background-color: white;
+      content: "";
+      transform-origin: 100% 100%;
+      transform: rotate(-33.7deg) skewX(12deg);
+      z-index: -1;
+      opacity: 0.1;
+    }
+
+    &:after {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: -20.2%;
+      height: 2500px;
+      background-color: black;
+      content: "";
+      transform-origin: 0% 0%;
+      transform: rotate(-33.7deg) skewX(12deg);
+      z-index: -1;
+      opacity: 0.15;
+    }
+
+  }
 }
 
 .card--image {
-  position: absolute;
-  top: 0; right: 50%; bottom: 0; left: 0;
-  background-position: center center;
-  background-size: cover;
-  margin-top: -1px;
-  margin-left: -1px
+
+  &__wrap__content {
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: cover;
+    background-image: url("{{ 'default-prize.png' | image_url }}");
+  }
+
+  @media only screen and (min-width: 750px) {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 44%;
+    overflow: hidden;
+    z-index: 2;
+
+    &__wrap {
+      position: absolute;
+      top: -8%;
+      bottom: -8%;
+      left: -8%;
+      right: 10%;
+      transform: rotate(-7deg);
+      overflow: hidden;
+
+      &__content {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: -10%;
+        transform: rotate(7deg);
+      }
+    }
+  }
 }
 
 .card--body {
-  position: absolute;
-  top: 0; right: 0; bottom: 0; left: 50%;
-  background: #F6F6F6;
-  padding-right: 30px;
-  padding-left: 0;
-  color: #4A4A4A;
-  text-align: center;
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @media only screen and (min-width: 750px) {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 46%;
+    right: 0;
+    color: #4A4A4A;
+    background: #F6F6F6;
+    overflow-y: scroll;
+    text-align: center;
+    z-index: 1;
+
+    &__content {
+      padding: 0 24px 0 15%;
+      text-align: center;
+    }
+  }
+
+
 
 
   h1 {
@@ -98,27 +167,19 @@ body {
   > div {
     position: relative;
   }
-
-  &:before {
-    content: " ";
-    display: block;
-    position: absolute;
-    top: 0; bottom: 0; left: -35px;
-    width: 100px;
-    background: #F6F6F6;
-    transform: skewX(8deg)
-  }
 }
 
 
 .wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-  top: 0; right: 0; bottom: 0; left: 0;
-  background-image: url("{{ 'background.svg' | image_url }}");
-  background-position: center center;
+
+  @media only screen and (min-width: 750px) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    overflow: hidden;
+  }
 }
 
 
@@ -157,9 +218,9 @@ input[type=text] {
 }
 
 input[type=text], select {
-  height: 25px;
+  height: 23px;
   padding: 5px 10px;
-  font-size: 16px;
+  font-size: 14px;
   margin-bottom: 10px;
   border-radius: 5px;
   border: 1px solid #ccc;
@@ -185,6 +246,13 @@ em {
 
 input[type=text][readonly] {
   font-size: 10px;
+}
+
+.entry__dob {
+  label {
+    margin-bottom: 3px;
+    font-size: 14px;
+  }
 }
 
 .input-with-button-appended {
@@ -218,21 +286,24 @@ input[type=text][readonly] {
 
   .wrapper {
     display: block;
-    padding: 0 20px;
+    padding: 24px;
     overflow: auto;
   }
 
   .card--image {
+    position: relative;
     padding-bottom: 60%;
-  }
 
-  .card--body, .card--image {
-    position: static;
-    display: block;
+    &__wrap,
+    &__wrap__content {
+      position: absolute;
+      top: 0; bottom: 0;
+      left: 0; right: 0;
+    }
   }
 
   .card--body {
-    padding: 0 20px;
+    padding: 24px;
     &:before {
       content: none;
     }
