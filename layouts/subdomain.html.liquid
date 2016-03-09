@@ -25,6 +25,14 @@
       .card--image {
         background-image: url({{ space.primary_image }});
       }
+
+      {% if space.mobile_primary_image %}
+        @media only screen and (max-width: 750px) {
+          .card--image {
+            background-image: url({{ space.mobile_primary_image }});
+          }
+        }
+      {% endif %}
     </style>
   </head>
 

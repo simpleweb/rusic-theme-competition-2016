@@ -1,23 +1,64 @@
-ga_code:
-  value: ""
-  help_text: "Your Google Anylitics tracking code. Should look something like this UA-12345678-9"
-after_enter_text:
-  value: "Thank you for entering!"
-  help_text: "Maecenas faucibus mollis interdum."
-  type: "wysiwyg"
-referal_guide:
-  value: "<em>Increase your chance of winning</em> by sharing this competition with friends!</em>"
-  help_text: "Maecenas faucibus mollis interdum."
-  type: "wysiwyg"
-referal_multiplier:
-  value: 3
-  help_text: "Maecenas faucibus mollis interdum."
-  type: "number"
-primary_color:
-  value: "#59A7FF"
-  help_text: "Maecenas faucibus mollis interdum."
-  type: "color"
-primary_image:
-  value: "http://www.planwallpaper.com/static/images/abstract-wallpaper-20.jpg"
-  help_text: "Maecenas faucibus mollis interdum."
-  type: "file"
+custom_attribute_collections:
+  prize:
+    title: Prize
+    help_title: About your prize
+    help_body: Let us know what your prize is. We'll use this in various places from the page meta data, title and terms and conditions.
+    attributes:
+      prize_title:
+        value:
+        help_text: e.g. A reasonably priced car
+        type: string
+  copy:
+    title: Copy
+    help_title: The copy used in your prize draw
+    help_body: If you choose to do so you can fully customise the copy that is used in your prize draw. We've pre-filled this with some sensible defaults so you can get started quickly.
+    attributes:
+      after_enter_text:
+        value: Thank you for entering!
+        help_text: The copy to show after the prize draw participant has entered the prize draw
+        type: wysiwyg
+  referals:
+    title: Referals
+    help_title: Referals system
+    help_body: Rusic has a powerful referals system that you can take advantage of. You can give the prize draw participants an oppertunity to earn more entries in the prize draw by refering their friends and family through email or social networks.
+    attributes:
+      referals_enabled:
+        value: true
+        help_text: Enable the referals system? We recommend you don't change this setting mid-campaign.
+        type: boolean
+      referal_guide:
+        value: <em>Increase your chance of winning</em> by sharing this prize draw with friends!</em>
+        help_text: Feel free to change the copy of the referal instructions if you like.
+        type: wysiwyg
+      referal_multiplier:
+        value: 3
+        help_text: How many extra entries should your prize draw participants get for each converted referal?
+        type: number
+  appearance:
+    title: Appearance
+    help_title: Change the way your prize draw looks
+    help_body: You'll want to provide a primary image for both desktop and mobile platforms. If you need your logo present, you'll need to bake this into the images that you upload.<br><br>You can also provide a primary color, we recommend using your brand colors for this.
+    attributes:
+      primary_color:
+        value: "#59A7FF"
+        help_text: Your base color. Used for the background.
+        type: color
+      primary_image:
+        value: http://www.planwallpaper.com/static/images/abstract-wallpaper-20.jpg
+        help_text: Recommended 350 x 450
+        type: file
+      mobile_primary_image:
+        value: http://www.placehold.it/361x216
+        help_text: Recommended 750 x 450
+        type: file
+  integrations:
+    title: Integrations
+    help_title: Need to hookup to a third-party service?
+    help_body: Here you can provide your settings for intergrating with services such as anylitics. You can even provide your own scripts giving you full controll of which services you intergrate with.
+    attributes:
+      google_anylitics_code:
+        value: ""
+        help_text: Your Google Anylitics tracking code. Should look something like this UA-12345678-9
+      additional_scripts:
+        value: ""
+        help_text: Instert any aditional scripts you have here. Ensuring that you include the <code>&lt;script&gt;</code> tags.

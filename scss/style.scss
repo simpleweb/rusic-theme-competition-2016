@@ -51,7 +51,7 @@ body {
 .card {
   width: 700px;
   height: 450px;
-  background: #333;
+  background: #F6F6F6;
   position: relative;
   overflow: hidden;
   left: -1px;
@@ -135,6 +135,7 @@ a {
   border: none;
   margin-bottom: 15px;
   cursor: pointer;
+  -webkit-appearance: none;
   &.active {
     background: #27ae60;
   }
@@ -204,5 +205,42 @@ input[type=text][readonly] {
   .button {
     border-radius: 0 5px 5px 0;
     padding: 9px 10px;
+  }
+}
+
+
+@media only screen and (max-width: 750px) {
+  input[type=text], select {
+    width: 100%;
+    box-sizing: border-box;
+    height: 30px;
+  }
+
+  .wrapper {
+    display: block;
+    padding: 0 20px;
+    overflow: auto;
+  }
+
+  .card--image {
+    padding-bottom: 60%;
+  }
+
+  .card--body, .card--image {
+    position: static;
+    display: block;
+  }
+
+  .card--body {
+    padding: 0 20px;
+    &:before {
+      content: none;
+    }
+  }
+
+  .card {
+    position: static;
+    width: auto;
+    height: auto;
   }
 }
