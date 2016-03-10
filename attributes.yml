@@ -51,6 +51,10 @@ custom_attribute_collections:
         value: http://www.placehold.it/361x216
         help_text: Recommended 750 x 450
         type: file
+      email_confirmation_image:
+        value: http://www.placehold.it/600x200
+        help_text: 600 x any height
+        type: file
   integrations:
     title: Integrations
     help_title: Need to hookup to a third-party service?
