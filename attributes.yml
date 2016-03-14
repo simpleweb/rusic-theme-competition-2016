@@ -78,4 +78,20 @@ custom_attribute_collections:
         value: ""
         help_text: You can fully customise the terms copy on the provided to your prize draw participants
         type: "wysiwyg"
-
+  social:
+    title: Social Copy
+    help_title: Social Copy
+    help_body: Change what text is shown when a participant shares the competition on social media.
+    attributes:
+      facebook_message:
+        value: ""
+        help_text: The message when a participant shares the competition to facebook
+      twitter_message:
+        value: ""
+        help_text: The message when a participant shares the competition to twitter
+      google_message:
+        value: ""
+        help_text: The message when a participant shares the competition to google
+      pinterest_message:
+        value: ""
+        help_text: The message when a participant shares the competition to pinterest
