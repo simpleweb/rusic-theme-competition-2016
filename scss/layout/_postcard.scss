@@ -1,0 +1,190 @@
+.layout--postcard {
+
+  .wrapper {
+    @media only screen and (min-width: 750px) {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      top: 0; right: 0; bottom: 0; left: 0;
+      overflow: hidden;
+    }
+  }
+
+  .card {
+    background: #F6F6F6;
+    position: relative;
+
+    @media only screen and (min-width: 750px) {
+      width: 720px;
+      height: 510px;
+
+      &:before {
+        position: absolute;
+        bottom: 100%;
+        left: -22.5%;
+        right: 0;
+        height: 2500px;
+        background-color: white;
+        content: "";
+        transform-origin: 100% 100%;
+        transform: rotate(-35.4deg) skewX(9.6deg);
+        z-index: -1;
+        opacity: 0.1;
+      }
+
+      &:after {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: -22.5%;
+        height: 2500px;
+        background-color: black;
+        content: "";
+        transform-origin: 0% 0%;
+        transform: rotate(-35.4deg) skewX(9.6deg);
+        z-index: -1;
+        opacity: 0.25;
+      }
+
+    }
+  }
+
+  .card--image {
+
+    &__wrap__content {
+      background-repeat: no-repeat;
+      background-position: 50%;
+      background-size: cover;
+    }
+
+    @media only screen and (min-width: 750px) {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 44%;
+      overflow: hidden;
+      z-index: 2;
+
+      &__wrap {
+        position: absolute;
+        top: -8%;
+        bottom: -8%;
+        left: -8%;
+        right: 10%;
+        transform: rotate(-6deg);
+        overflow: hidden;
+
+        &__content {
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: -10%;
+          transform: rotate(6deg);
+        }
+      }
+    }
+  }
+
+  .card--body {
+
+    @media only screen and (min-width: 750px) {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 46%;
+      right: 0;
+      color: #4A4A4A;
+      background: #F6F6F6;
+      overflow-y: scroll;
+      text-align: center;
+      z-index: 1;
+
+      &__content {
+        padding: 0 24px 0 15%;
+        text-align: center;
+      }
+
+      form {
+        margin: 0 auto;
+        max-width: 280px;
+      }
+
+      input[type=text] {
+        width: 280px;
+        height: 32px;
+        box-sizing: border-box;
+      }
+    }
+
+    .entry {
+      &__basics, &__dob, &__gender { margin-bottom: 8px; }
+    }
+
+    h1 {
+      font-size: 21px;
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      font-size: 18px;
+    }
+
+    p {
+      font-size: 13px;
+      margin-bottom: 20px;
+    }
+
+    > div {
+      position: relative;
+    }
+
+
+  }
+
+  @media only screen and (max-width: 750px) {
+
+    .card { overflow: hidden; }
+
+    .card--image {
+
+      &__wrap {
+        position: absolute;
+        top: -8%;
+        bottom: -8%;
+        left: -8%;
+        right: -8%;
+        transform: rotate(-3deg);
+        overflow: hidden;
+
+        &__content {
+          position: absolute;
+          top: 0;
+          bottom: -5%;
+          left: 0;
+          right: 0%;
+          transform: rotate(3deg);
+        }
+      }
+    }
+
+    .card--body {
+
+      form {
+        margin: 0 auto;
+        max-width: 360px;
+
+        input[type=text] {
+          width: 100%;
+          box-sizing: border-box;
+          height: 30px;
+        }
+      }
+
+    }
+
+  }
+
+}

@@ -41,14 +41,22 @@ custom_attribute_collections:
     attributes:
       primary_color:
         value: "#59A7FF"
-        help_text: Your base color. Used for the background.
+        help_text: Your base color.
+        type: color
+      secondary_color:
+        value: "#4C4C4C"
+        help_text: Used for the background.
         type: color
       primary_image:
-        value: http://www.planwallpaper.com/static/images/abstract-wallpaper-20.jpg
+        value: http://rusic-theme-prize-draw.s3.amazonaws.com/default-prize.png
         help_text: Recommended 350 x 450
         type: file
       mobile_primary_image:
-        value: http://www.placehold.it/361x216
+        value: http://rusic-theme-prize-draw.s3.amazonaws.com/default-prize.png
+        help_text: Recommended 750 x 450
+        type: file
+      background_image:
+        value:
         help_text: Recommended 750 x 450
         type: file
       email_confirmation_image:

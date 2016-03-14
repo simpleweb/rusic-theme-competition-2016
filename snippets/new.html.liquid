@@ -2,23 +2,26 @@
 
 <form action="{{space.permalink}}/ideas" method="post" enctype="multipart/form-data" role="form">
 
+  <div class="entry__basics">
 
-  <div>
-    <label class="visuallyhidden">First name</label>
-    <input type="text" name="idea[custom][first_name]" placeholder="First name">
+    <div>
+      <label class="visuallyhidden">First name</label>
+      <input type="text" name="idea[custom][first_name]" placeholder="First name">
+    </div>
+
+    <div>
+      <label class="visuallyhidden">Last name</label>
+      <input type="text" name="idea[custom][surname]" placeholder="Last name">
+    </div>
+
+    <div>
+      <label class="visuallyhidden">Email address</label>
+      <input type="text" name="identity[email]" placeholder="Email address">
+    </div>
+
   </div>
 
-  <div>
-    <label class="visuallyhidden">Last name</label>
-    <input type="text" name="idea[custom][surname]" placeholder="Last name">
-  </div>
-
-  <div>
-    <label class="visuallyhidden">Email address</label>
-    <input type="text" name="identity[email]" placeholder="Email address">
-  </div>
-
-  <div>
+  <div class="entry__dob">
     <div>
       <label>Date of birth</label>
     </div>
@@ -53,15 +56,21 @@
     </select>
   </div>
 
-  <div>
+  <div class="entry__gender">
     <label class="visuallyhidden">Gender</label>
-    <input type="radio" value="male" name="idea[custom][gender]"> Male
-    <input type="radio" value="female" name="idea[custom][gender]"> Female
+    <div class="gender">
+      <input type="radio" value="male" id="gender_male" name="idea[custom][gender]">
+      <label for="gender_male">Male</label>
+    </div>
+    <div class="gender">
+      <input type="radio" value="female" id="gender_female" name="idea[custom][gender]">
+      <label for="gender_female">Female</label>
+    </div>
   </div>
 
   <br>
 
-  <div>
+  <div class="entry__terms">
     <small>
       {% if space.terms_link == "" %}
         <a href="{{ space.permalink }}/pages/terms" target="_blank">Terms &amp; conditions</a>
@@ -73,9 +82,11 @@
 
   <br>
 
-  <input type="submit" class="button" value="Send Entry">
+  <div class="entry__submit">
+    <input type="submit" class="button" value="Send Entry">
+  </div>
 
-  <div>
+  <div class="entry__deadline">
     <small>
       Entry closes midnight 4th March 2016.
     </small>
