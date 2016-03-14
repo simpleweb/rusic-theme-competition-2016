@@ -1,0 +1,151 @@
+.layout--poster {
+
+  .wrapper {
+    position: relative;
+    overflow: hidden;
+    transition: padding 0.4s;
+    @media only screen and (min-width: 750px) {
+      padding: 72px 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &:before {
+        position: absolute;
+        bottom: 100%;
+        right: 50%;
+        width: 100%;
+        padding-top: 100%;
+        background-color: white;
+        content: "";
+        transform-origin: 100% 100%;
+        transform: rotate(-45deg);
+        z-index: -1;
+        opacity: 0.1;
+      }
+
+      &:after {
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        width: 100%;
+        padding-top: 100%;
+        background-color: black;
+        content: "";
+        transform-origin: 0% 0%;
+        transform: rotate(-45deg);
+        z-index: -1;
+        opacity: 0.15;
+      }
+
+    }
+  }
+
+  .card {
+    background: #F6F6F6;
+    overflow: hidden;
+
+    @media only screen and (min-width: 750px) {
+      width: 720px;
+
+
+      &:before {
+        position: absolute;
+        top: 0;
+        left: 0%;
+        width: 200%;
+        padding-top: 200%;
+        background-color: black;
+        content: "";
+        transform-origin: 0% 0%;
+        transform: rotate(45deg);
+        z-index: -1;
+        opacity: 0.1;
+      }
+
+    }
+  }
+
+  .card--image {
+
+    &__wrap__content {
+      background-repeat: no-repeat;
+      background-position: 50%;
+      background-size: cover;
+    }
+
+    @media only screen and (min-width: 750px) {
+      position: relative;
+      height: 320px;
+    }
+
+    &__wrap {
+      position: absolute;
+      top: -8%;
+      bottom: -8%;
+      left: -8%;
+      right: -8%;
+      transform: rotate(-3deg);
+      overflow: hidden;
+
+      &__content {
+        position: absolute;
+        top: 0;
+        bottom: -5%;
+        left: 0;
+        right: 0%;
+        transform: rotate(3deg);
+      }
+    }
+  }
+
+  .card--body {
+
+    @media only screen and (min-width: 750px) {
+
+      &__content {
+        padding: 48px 24px 24px;
+        text-align: center;
+        & > h2 {
+          margin: 0 0 32px;
+        }
+      }
+    }
+
+    form {
+      margin: 0 auto;
+      max-width: 360px;
+
+      input[type=text] { width: 100%; }
+    }
+
+    .entry {
+      &__basics, &__dob, &__gender { margin-bottom: 16px; }
+    }
+
+    input[type=text] {
+      width: 100%;
+      box-sizing: border-box;
+      height: 32px;
+    }
+
+    h1 {
+      font-size: 21px;
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      font-size: 18px;
+    }
+
+    p {
+      font-size: 13px;
+      margin-bottom: 20px;
+    }
+
+    > div {
+      position: relative;
+    }
+  }
+
+}

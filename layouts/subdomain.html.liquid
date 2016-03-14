@@ -22,22 +22,36 @@
     <style>
       body { background: {{ space.secondary_color }}; }
       .button { background: {{ space.primary_color }}; }
+      input[type=radio]:checked + label:after { background-color: {{ space.primary_color }} !important; }
       .card--image__wrap__content {
-        /*background-image: url({{ space.primary_image }});*/
+        background-image: url({{ space.primary_image }});
         background-color: {{ space.primary_color }};
       }
 
       {% if space.mobile_primary_image %}
         @media only screen and (max-width: 750px) {
           .card--image__wrap__content {
-            /*background-image: url({{ space.mobile_primary_image }});*/
+            background-image: url({{ space.mobile_primary_image }});
           }
         }
       {% endif %}
+
+      {% if space.background_image != blank %}
+        @media only screen and (min-width: 750px) {
+          .background {
+            background-image: url({{ space.background_image }});
+            opacity: 0.3;
+          }
+          .wrapper:before, .wrapper:after,
+          .card:before, .card:after { display: none; }
+          .card { box-shadow: 0px 0px 5px 3px rgba(50,50,50,0.3); }
+        }
+      {% endif %}
+
     </style>
   </head>
 
-  <body>
+  <body class="layout--poster">
 
     <div class="wrapper">
       <div class="card">
@@ -53,6 +67,8 @@
         </div>
       </div>
     </div>
+
+    <div class="background"></div>
 
     {% if space.ga_code != "" %}
       <script>
