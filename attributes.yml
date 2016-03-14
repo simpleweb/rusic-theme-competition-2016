@@ -66,3 +66,16 @@ custom_attribute_collections:
       additional_scripts:
         value: ""
         help_text: Instert any aditional scripts you have here. Ensuring that you include the <code>&lt;script&gt;</code> tags.
+  legal:
+    title: Legal
+    help_title: Legal requirements
+    help_body: Here you can review and customise the terms and conditions of the competition.
+    attributes:
+      terms_link:
+        value: ""
+        help_text: If you want to link to an external terms page enter the link here.
+      terms_copy:
+        value: ""
+        help_text: You can fully customise the terms copy on the provided to your prize draw participants
+        type: "wysiwyg"
+

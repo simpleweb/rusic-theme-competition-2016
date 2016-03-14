@@ -63,7 +63,11 @@
 
   <div>
     <small>
-      <a href="#">Terms &amp; conditions</a>
+      {% if space.terms_link == "" %}
+        <a href="{{ space.permalink }}/pages/terms" target="_blank">Terms &amp; conditions</a>
+      {% else %}
+        <a href="{{ space.terms_link }}" target="_blank">Terms &amp; conditions</a>
+      {% endif %}
     </small>
   </div>
 
