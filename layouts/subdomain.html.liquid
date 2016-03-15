@@ -20,10 +20,31 @@
     </script>
 
     <style>
-      body { background: {{ space.primary_color }}; }
+      body {
+        background-color: {{ space.primary_color }};
+        background-image: url({{ space.background_image }});
+        background-size: cover;
+        background-position: center;
+
+        {% if space.background_image_mode == "contain" %}
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: center;
+        {% elsif space.background_image_mode == "tile" %}
+          background-size: auto;
+        {% endif %}
+      }
+
+      {% if space.background_image %}
+        .wrapper {
+          background-image: none;
+        }
+      {% endif %}
+
       .button { background: {{ space.primary_color }}; }
       .card--image {
         background-image: url({{ space.primary_image }});
+        background-color: {{ space.primary_color }};
       }
 
       {% if space.mobile_primary_image %}
