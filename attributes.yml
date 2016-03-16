@@ -2,7 +2,7 @@ custom_attribute_collections:
   prize:
     title: Prize
     help_title: About your prize
-    help_body: Let us know what your prize is. We'll use this in various places from the page meta data, title and terms and conditions.
+    help_body: Let us know what your prize is. We'll use this text in various places including the page meta data, title and competition terms.
     attributes:
       prize_title:
         value:
@@ -11,28 +11,28 @@ custom_attribute_collections:
   copy:
     title: Copy
     help_title: The copy used in your prize draw
-    help_body: If you choose to do so you can fully customise the copy that is used in your prize draw. We've pre-filled this with some sensible defaults so you can get started quickly.
+    help_body: If you choose to do so you can fully customize the copy that is used in your prize draw. We've pre-filled this with some sensible defaults so you can get started quickly.
     attributes:
-      after_enter_text:
+      after_entry_text:
         value: Thank you for entering!
         help_text: The copy to show after the prize draw participant has entered the prize draw
         type: wysiwyg
-  referals:
-    title: Referals
-    help_title: Referals system
-    help_body: Rusic has a powerful referals system that you can take advantage of. You can give the prize draw participants an oppertunity to earn more entries in the prize draw by refering their friends and family through email or social networks.
+  referrals:
+    title: Referrals
+    help_title: Referrals system
+    help_body: Rusic has a powerful referrals system that you can take advantage of. You can give the prize draw participants an oppertunity to earn more entries in the prize draw by refering their friends and family through email or social networks.
     attributes:
-      referals_enabled:
+      referrals_enabled:
         value: true
-        help_text: Enable the referals system? We recommend you don't change this setting mid-campaign.
+        help_text: Enable the referrals system? We recommend you don't change this setting mid-campaign.
         type: boolean
-      referal_guide:
+      referral_guide:
         value: <em>Increase your chance of winning</em> by sharing this prize draw with friends!</em>
-        help_text: Feel free to change the copy of the referal instructions if you like.
+        help_text: Feel free to change the copy of the referral instructions if you like.
         type: wysiwyg
-      referal_multiplier:
+      referral_multiplier:
         value: 3
-        help_text: How many extra entries should your prize draw participants get for each converted referal?
+        help_text: How many extra entries should your prize draw participants get for each converted referral?
         type: number
   appearance:
     title: Appearance
@@ -57,11 +57,11 @@ custom_attribute_collections:
         type: file
       background_image:
         value: ""
-        help_text: If you like you can set your own background image. The size depends on if you want it to contain, cover or tile.
+        help_text: If you like you can set your own background image. The size depends whether you want it to contain, cover or tile.
         type: file
       background_image_mode:
         value: "cover"
-        help_text: How do you want your background image to look.
+        help_text: How you want your background image to look
         type: select
       layout:
         value: "postcard"
@@ -70,27 +70,27 @@ custom_attribute_collections:
   integrations:
     title: Integrations
     help_title: Need to hookup to a third-party service?
-    help_body: Here you can provide your settings for intergrating with services such as anylitics. You can even provide your own scripts giving you full controll of which services you intergrate with.
+    help_body: Here you can provide your settings for integrating with services such as analytics. You can even provide your own scripts giving you full control of which services you integrate with.
     attributes:
-      google_anylitics_code:
+      google_analytics_code:
         value: ""
-        help_text: Your Google Anylitics tracking code. Should look something like this UA-12345678-9
+        help_text: Your Google Analytics tracking code. Should look something like this UA-12345678-9
         type: "text"
       additional_scripts:
         value: ""
-        help_text: Instert any aditional scripts you have here. Ensuring that you include the <code>&lt;script&gt;</code> tags.
+        help_text: Insert any additional scripts you have here, ensuring that you include the <code>&lt;script&gt;</code> tags.
         type: "text"
   legal:
     title: Legal
     help_title: Legal requirements
-    help_body: Here you can review and customise the terms and conditions of the competition.
+    help_body: Here you can review and customize the terms and conditions of the competition.
     attributes:
       terms_link:
         value: ""
         help_text: If you want to link to an external terms page enter the link here.
       terms_copy:
         value: ""
-        help_text: You can fully customise the terms copy on the provided to your prize draw participants
+        help_text: You can fully customize the terms copy provided to your prize draw participants
         type: "wysiwyg"
   social:
     title: Social Copy
@@ -111,8 +111,8 @@ custom_attribute_collections:
         help_text: The message when a participant shares the competition to pinterest
   entry_requirements:
     title: Entry requirements
-    help_title: Customise entry requirements
-    help_body: Customise what information the participant must enter.
+    help_title: Customize entry requirements
+    help_body: Customize what information the participant must enter.
     attributes:
       require_date_of_birth:
         value: false
