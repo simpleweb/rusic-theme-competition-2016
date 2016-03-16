@@ -45,7 +45,7 @@ custom_attribute_collections:
         type: color
       primary_image:
         value: http://rusic-theme-prize-draw.s3.amazonaws.com/default-prize.png
-        help_text: Recommended 350 x 450
+        help_text: Recommended 390 x 550 for postcard mode (default) or 600 x 360 for poster mode.
         type: file
       mobile_primary_image:
         value: http://rusic-theme-prize-draw.s3.amazonaws.com/default-prize.png
@@ -62,6 +62,10 @@ custom_attribute_collections:
       background_image_mode:
         value: "cover"
         help_text: How do you want your background image to look.
+        type: select
+      layout:
+        value: "postcard"
+        help_text: "Postcard (image left) or Poster (image top)"
         type: select
   integrations:
     title: Integrations

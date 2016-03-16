@@ -57,10 +57,16 @@
   {% endif %}
 
   {% if space.require_gender == "1" %}
-    <div>
+    <div class="entry__gender">
       <label class="visuallyhidden">Gender</label>
-      <input type="radio" value="male" name="idea[custom][gender]"> Male
-      <input type="radio" value="female" name="idea[custom][gender]"> Female
+      <div class="gender">
+        <input type="radio" value="male" id="gender_male" name="idea[custom][gender]">
+        <label for="gender_male">Male</label>
+      </div>
+      <div class="gender">
+        <input type="radio" value="female" id="gender_female" name="idea[custom][gender]">
+        <label for="gender_female">Female</label>
+      </div>
     </div>
 
     <br>
@@ -82,7 +88,7 @@
 
   <div>
     <small>
-      Entry closes midnight 4th March 2016.
+      Entry closes {{ space.expires_at | date: "%d %B %Y at %R"}}.
     </small>
     <br><br>
   </div>

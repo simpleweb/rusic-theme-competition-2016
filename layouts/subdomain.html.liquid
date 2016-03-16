@@ -35,7 +35,7 @@
         {% endif %}
       }
 
-      {% if space.background_image %}
+      {% if space.background_image != "" %}
         .wrapper {
           background-image: none;
         }
@@ -57,13 +57,20 @@
     </style>
   </head>
 
-  <body>
+  <body class="{{ space.layout }}">
 
     <div class="wrapper">
       <div class="card">
         <div class="card--image"></div>
         <div class="card--body">
-          {{ content_for_layout }}
+          {% if space.expired? %}
+            <div class="expired">
+              <h3>Sorry</h3>
+              <h6>The competition has now been closed. Winners will be notified by email.</h6>
+            </div>
+          {% else %}
+            {{ content_for_layout }}
+          {% endif %}
         </div>
       </div>
     </div>

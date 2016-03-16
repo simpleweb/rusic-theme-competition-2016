@@ -49,8 +49,8 @@ body {
 }
 
 .card {
-  width: 700px;
-  height: 450px;
+  width: 776px;
+  height: 550px;
   background: #F6F6F6;
   position: relative;
   overflow: hidden;
@@ -100,10 +100,10 @@ body {
     content: " ";
     display: block;
     position: absolute;
-    top: 0; bottom: 0; left: -35px;
+    top: 0; bottom: 0; left: -29px;
     width: 100px;
     background: #F6F6F6;
-    transform: skewX(8deg)
+    transform: skewX(6deg)
   }
 }
 
@@ -116,8 +116,8 @@ body {
   top: 0; right: 0; bottom: 0; left: 0;
   background-image: url("{{ 'background.svg' | image_url }}");
   background-position: center center;
+  background-size: 3840px 2400px;
 }
-
 
 a {
   text-decoration: none;
@@ -242,7 +242,7 @@ input[type=text][readonly] {
   }
 }
 
-.terms {
+.terms, .expired {
   position: absolute;
   top: 0; right: 0; bottom: 0; left: 0;
   overflow: auto;
@@ -250,6 +250,105 @@ input[type=text][readonly] {
   padding: 20px;
 }
 
+.expired {
+  padding-top: 50px;
+  text-align: center;
+}
+
 .rel {
   position: relative;
+}
+
+.poster {
+  form {
+    input[type=text] {
+      width: 100%;
+      box-sizing: border-box;
+    }
+  }
+
+  .wrapper {
+    display: block;
+    padding: 0 20px;
+    overflow: auto;
+  }
+
+  .card--image {
+    padding-bottom: 60%;
+  }
+
+  .card--body, .card--image {
+    position: static;
+    display: block;
+  }
+
+  .card--body {
+    padding: 0 20px;
+    &:before {
+      content: none;
+    }
+  }
+
+  .card {
+    position: static;
+    margin: auto;
+    margin-top: 20px;
+    height: auto;
+    width: 600px;
+  }
+}
+
+.entry__gender {
+  text-align: left;
+
+  .gender {
+    position: relative;
+    min-height: 42px;
+    width: 49%;
+    display: inline-block;
+    float: left;
+    border-radius: 6px;
+    z-index: 2;
+    &:not(:first-of-type) { margin-left: 2%; }
+
+    input {
+      position: absolute;
+      top: 14px;
+      left: 14px;
+      margin: 0;
+    }
+
+    label {
+      position: absolute;
+      top: 0; bottom: 0;
+      left: 0; right: 0;
+      padding: 0 14px 0 36px;
+      line-height: 42px;
+      margin: 0;
+      border-radius: 6px;
+      overflow: hidden;
+
+      &:before,
+      &:after {
+        position: absolute;
+        top: 0; bottom: 0;
+        left: 0; right: 0;
+        content: "";
+        z-index: -1;
+      }
+
+      &:before { background-color: darken($gray-light, 5%); }
+      &:after {
+        background-color: rgba(0,0,0,0);
+        transition: background-color 0.4s;
+        opacity: 0.2;
+      }
+    }
+  }
+
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
 }
