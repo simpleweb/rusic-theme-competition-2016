@@ -149,11 +149,11 @@ a {
   margin: -1px; padding: 0; border: 0;
 }
 
-input[type=text] {
+input[type=text], input[type=email] {
   -webkit-appearance: none;
 }
 
-input[type=text], select {
+input[type=text], input[type=email], select {
   height: 25px;
   padding: 5px 10px;
   font-size: 16px;
@@ -207,7 +207,7 @@ input[type=text][readonly] {
 
 
 @media only screen and (max-width: 750px) {
-  input[type=text], select {
+  input[type=text], input[type=email], select {
     width: 100%;
     box-sizing: border-box;
     height: 30px;
@@ -261,7 +261,7 @@ input[type=text][readonly] {
 
 .poster {
   form {
-    input[type=text] {
+    input[type=text], input[type=email] {
       width: 100%;
       box-sizing: border-box;
     }

@@ -1,12 +1,16 @@
 {% capture referral_link %}http://{{host}}{{idea.referral_link}}{% endcapture %}
 <div class="rel">
+  <h1>Win {{ space.prize_title }}</h1>
+
   <p>
-    <span class="subtle">{{ space.after_enter_text }}</span>
+    <span class="subtle">{{ space.after_entry_text }}</span>
   </p>
 
-  <h1>You have {{ idea.referrals | times:space.referal_multiplier | plus:1 | pluralize: 'entry', 'entries' }}</h1>
+  {% if space.referrals_enabled == "1" %}
+    <h1>You have {{ idea.referrals | times:space.referral_multiplier | plus:1 | pluralize: 'entry', 'entries' }}</h1>
 
-  <p>{{ space.referal_guide }}</p>
+    <p>{{ space.referral_guide }}</p>
+  {% endif %}
 
   <div class="addthis_sharing_toolbox"></div>
 
@@ -19,7 +23,10 @@
     <a id="referral_link_button" href="#" class="button js-clipboard" data-clipboard-target="#referral_link">Copy</a>
   </div>
 
-  <p>Each referral gives you <b>{{ space.referal_multiplier }} more entires.</b></p>
+  {% if space.referrals_enabled == "1" %}
+    <p>Each referral gives you <b>{{ space.referral_multiplier }} more entires.</b></p>
+  {% endif %}
+
 </div>
 
 <script>

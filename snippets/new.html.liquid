@@ -1,3 +1,5 @@
+<h1>Win {{ space.prize_title }}</h1>
+
 <h2>Enter your details below</h2>
 
 <form action="{{space.permalink}}/ideas" method="post" enctype="multipart/form-data" role="form">
@@ -5,17 +7,21 @@
 
   <div>
     <label class="visuallyhidden">First name</label>
-    <input type="text" name="idea[custom][first_name]" placeholder="First name">
+    <input type="text" name="idea[custom][first_name]" placeholder="First name" required>
   </div>
 
   <div>
     <label class="visuallyhidden">Last name</label>
-    <input type="text" name="idea[custom][surname]" placeholder="Last name">
+    <input type="text" name="idea[custom][surname]" placeholder="Last name" required>
   </div>
 
   <div>
     <label class="visuallyhidden">Email address</label>
-    <input type="text" name="identity[email]" placeholder="Email address">
+    {% if space.guest_ideas %}
+      <input type="email" name="identity[email]" placeholder="Email address" required>
+    {% else %}
+      <input type="email" name="idea[custom][email]" placeholder="Email address" required>
+    {% endif %}
   </div>
 
   {% if space.require_date_of_birth == "1" %}
@@ -60,11 +66,11 @@
     <div class="entry__gender">
       <label class="visuallyhidden">Gender</label>
       <div class="gender">
-        <input type="radio" value="male" id="gender_male" name="idea[custom][gender]">
+        <input type="radio" value="male" id="gender_male" name="idea[custom][gender]" required>
         <label for="gender_male">Male</label>
       </div>
       <div class="gender">
-        <input type="radio" value="female" id="gender_female" name="idea[custom][gender]">
+        <input type="radio" value="female" id="gender_female" name="idea[custom][gender]" required>
         <label for="gender_female">Female</label>
       </div>
     </div>
