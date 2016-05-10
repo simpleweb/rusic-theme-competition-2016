@@ -79,6 +79,16 @@
       </div>
     </div>
 
+    <div>
+      {% if current_participant.name %}
+      <a href="/auth/signout">Not {{current_participant.name}}? Enter now</a>
+      {% elsif current_participant.nickname %}
+      <a href="/auth/signout">Not {{current_participant.nickname}}? Enter now</a>
+      {% else %}
+      <a href="/auth/signout">Somebody else to enter? Click Here</a>
+      {% endif %}
+    </div>
+
     {{ space.additional_scripts }}
     {% if space.google_analytics_code != "" %}
       <script>
