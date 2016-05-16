@@ -1,4 +1,12 @@
 custom_attribute_collections:
+  email:
+    title: Email
+    help_title: Email
+    attributes:
+      email_confirmation_image:
+        value: http://rusic-theme-prize-draw.s3.amazonaws.com/default-prize.png
+        help_text: 600 x any height
+        type: file
   prize:
     title: Prize
     help_title: About your prize
@@ -50,10 +58,6 @@ custom_attribute_collections:
       mobile_primary_image:
         value: http://rusic-theme-prize-draw.s3.amazonaws.com/default-prize.png
         help_text: Recommended 750 x 450
-        type: file
-      email_confirmation_image:
-        value: http://rusic-theme-prize-draw.s3.amazonaws.com/default-prize.png
-        help_text: 600 x any height
         type: file
       background_image:
         value: ""
