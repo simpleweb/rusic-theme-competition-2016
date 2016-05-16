@@ -352,3 +352,15 @@ input[type=text][readonly] {
     clear: both;
   }
 }
+
+.logout {
+  color: #4A4A4A;
+  top: 650px;
+  left: 550px;
+  position: absolute;
+  z-index: 10;
+
+  a:visited, a:focus {
+    color: #4A4A4A;
+  }
+}
