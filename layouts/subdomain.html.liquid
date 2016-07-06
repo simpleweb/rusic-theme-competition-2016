@@ -77,16 +77,17 @@
           {% endif %}
         </div>
       </div>
-    </div>
 
-    <div class="logout">
-      {% if current_participant.name %}
-        <a href="/auth/signout">Not {{current_participant.name}}? Enter now</a>
-      {% elsif current_participant.nickname %}
-        <a href="/auth/signout">Not {{current_participant.nickname}}? Enter now</a>
-      {% else %}
-        <a href="/auth/signout">Somebody else to enter? Click Here</a>
-      {% endif %}
+      <div class="logout">
+        {% if current_participant.name %}
+          <a href="/auth/signout">Not {{current_participant.name}}? Enter now</a>
+        {% elsif current_participant.nickname %}
+          <a href="/auth/signout">Not {{current_participant.nickname}}? Enter now</a>
+        {% else %}
+          <a href="/auth/signout">Somebody else to enter? Click Here</a>
+        {% endif %}
+      </div>
+
     </div>
 
     {{ space.additional_scripts }}
