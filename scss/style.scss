@@ -218,6 +218,28 @@ input[type=text][readonly] {
   text-align: center;
 }
 
+.logout {
+  color: #4A4A4A;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  a {
+    position: relative;
+    top: 300px;
+  }
+
+  a:visited, a:focus {
+    color: #4A4A4A;
+  }
+}
+
 @media only screen and (max-width: 750px) {
   input[type=text], input[type=email], select {
     width: 100%;
@@ -256,6 +278,14 @@ input[type=text][readonly] {
     position: static;
     width: auto;
     height: auto;
+  }
+  
+  .logout {
+    position: static;
+
+    a {
+      top: 20px;
+    }
   }
 }
 
@@ -354,17 +384,5 @@ input[type=text][readonly] {
     content: "";
     display: table;
     clear: both;
-  }
-}
-
-.logout {
-  color: #4A4A4A;
-  top: 650px;
-  left: 550px;
-  position: absolute;
-  z-index: 10;
-
-  a:visited, a:focus {
-    color: #4A4A4A;
   }
 }
