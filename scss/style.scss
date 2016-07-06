@@ -205,6 +205,18 @@ input[type=text][readonly] {
   }
 }
 
+.terms, .expired {
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+  overflow: auto;
+  text-align: left;
+  padding: 20px;
+}
+
+.expired {
+  padding-top: 50px;
+  text-align: center;
+}
 
 @media only screen and (max-width: 750px) {
   input[type=text], input[type=email], select {
@@ -235,24 +247,16 @@ input[type=text][readonly] {
     }
   }
 
+  .expired {
+    position: static;
+    padding-top: 20px;
+  }
+
   .card {
     position: static;
     width: auto;
     height: auto;
   }
-}
-
-.terms, .expired {
-  position: absolute;
-  top: 0; right: 0; bottom: 0; left: 0;
-  overflow: auto;
-  text-align: left;
-  padding: 20px;
-}
-
-.expired {
-  padding-top: 50px;
-  text-align: center;
 }
 
 .rel {
