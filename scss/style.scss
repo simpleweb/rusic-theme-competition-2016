@@ -219,7 +219,6 @@ input[type=text][readonly] {
 }
 
 .logout {
-  color: #4A4A4A;
   top: 0;
   left: 0;
   bottom: 0;
@@ -231,6 +230,7 @@ input[type=text][readonly] {
   justify-content: center;
 
   a {
+    color: #fff;
     position: relative;
     top: 300px;
   }
