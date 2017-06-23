@@ -92,10 +92,12 @@
 
   <input type="submit" class="button" value="Send Entry">
 
-  <div>
-    <small>
-      Entry closes {{ space.expires_at | date: "%d %B %Y at %R"}}.
-    </small>
-    <br><br>
-  </div>
+  {% if space.expires_at %}
+    <div>
+      <small>
+        Entry closes {{ space.expires_at | date: "%d %B %Y at %R"}}.
+      </small>
+      <br><br>
+    </div>
+  {% endif %}
 </form>
