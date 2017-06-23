@@ -101,7 +101,8 @@
         ga('send', 'pageview');
       </script>
     {% endif %}
-    <script src="{{ 'script.js' | javascript_url }}"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.7.1/clipboard.min.js"></script>
+    <script src="{{ 'main.js' | javascript_url }}"></script>
     <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-56c5cb60941da325"></script>
   </body>
 </html>
