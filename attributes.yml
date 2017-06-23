@@ -67,10 +67,17 @@ custom_attribute_collections:
         value: "cover"
         help_text: How you want your background image to look
         type: select
+        select_options:
+          - cover
+          - contain
+          - tile
       layout:
         value: "postcard"
         help_text: "Postcard (image left) or Poster (image top)"
         type: select
+        select_options:
+          - postcard
+          - poster
   integrations:
     title: Integrations
     help_title: Need to hookup to a third-party service?
