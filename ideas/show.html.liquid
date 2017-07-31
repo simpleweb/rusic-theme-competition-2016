@@ -6,11 +6,9 @@
     <span class="subtle">{{ space.after_entry_text }}</span>
   </p>
 
-  {% if space.referrals_enabled == "1" %}
-    <h1>You have {{ idea.referrals | times:space.referral_multiplier | plus:1 | pluralize: 'entry', 'entries' }}</h1>
+  <h1>You have {{ idea.referrals | times:space.referral_multiplier | plus:1 | pluralize: 'entry', 'entries' }}</h1>
 
-    <p>{{ space.referral_guide }}</p>
-  {% endif %}
+  <p>{{ space.referral_guide }}</p>
 
   <div class="addthis_sharing_toolbox"></div>
 
@@ -23,9 +21,7 @@
     <a id="referral_link_button" href="#" class="button js-clipboard" data-clipboard-target="#referral_link">Copy</a>
   </div>
 
-  {% if space.referrals_enabled == "1" %}
-    <p>Each referral gives you <b>{{ space.referral_multiplier }} more entires.</b></p>
-  {% endif %}
+  <p>Each referral gives you <b>{{ space.referral_multiplier }} more entires.</b></p>
 
 </div>
 

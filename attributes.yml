@@ -28,28 +28,24 @@ custom_attribute_collections:
   referrals:
     title: Referrals
     help_title: Referrals system
-    help_body: Rusic has a powerful referrals system that you can take advantage of. You can give the prize draw participants an oppertunity to earn more entries in the prize draw by refering their friends and family through email or social networks.
+    help_body: Give prize draw participants the opportunity to earn more entries by referring their friends and family through email or social networks.
     attributes:
-      referrals_enabled:
-        value: true
-        help_text: Enable the referrals system? We recommend you don't change this setting mid-campaign.
-        type: boolean
       referral_guide:
         value: <em>Increase your chance of winning</em> by sharing this prize draw with friends!</em>
         help_text: Feel free to change the copy of the referral instructions if you like.
         type: wysiwyg
       referral_multiplier:
         value: 3
-        help_text: How many extra entries should your prize draw participants get for each converted referral?
+        help_text: How many extra entries should your prize draw participants get for each converted referral? If you don’t want to award extra entries, just put “1” in this field”
         type: number
   appearance:
-    title: Appearance
-    help_title: Change the way your prize draw looks
-    help_body: You'll want to provide a primary image for both desktop and mobile platforms. If you need your logo present, you'll need to bake this into the images that you upload.<br><br>You can also provide a primary color, we recommend using your brand colors for this.
+    title: Branding
+    help_title: Branding
+    help_body: Customize the design of your prize draw.
     attributes:
       primary_color:
         value: "#59A7FF"
-        help_text: Your base color. Used for the background.
+        help_text: Select a background color, this will only be used when you have no background image.
         type: color
       primary_image:
         value: http://rusic-theme-prize-draw.s3.amazonaws.com/default-prize.png
@@ -61,11 +57,11 @@ custom_attribute_collections:
         type: file
       background_image:
         value: ""
-        help_text: If you like you can set your own background image. The size depends whether you want it to contain, cover or tile.
+        help_text: We recommend you upload an image at least 1024x1024px in size, you can also leave this blank if you want to just have a solid background color.
         type: file
       background_image_mode:
         value: "cover"
-        help_text: How you want your background image to look
+        help_text: You can choose to have your background image fill the entire screen (cover), fit within it (contain) or repeat across the whole screen (tile);
         type: select
         select_options:
           - cover
@@ -73,7 +69,7 @@ custom_attribute_collections:
           - tile
       layout:
         value: "postcard"
-        help_text: "Postcard (image left) or Poster (image top)"
+        help_text: Display the image on the left (postcard) or above the text (poster)
         type: select
         select_options:
           - postcard
@@ -81,13 +77,12 @@ custom_attribute_collections:
   integrations:
     title: Integrations
     help_title: Need to hookup to a third-party service?
-    help_body: Here you can provide your settings for integrating with services such as analytics. You can even provide your own scripts giving you full control of which services you integrate with.
+    help_body: Need to integrate a third-party service? Simply provide your Tracking ID to get Google Analytics set up, or paste in any tags from other services you want to integrate.
     attributes:
-      google_analytics_code:
+      google_analytics:
         value: ""
-        help_text: Your Google Analytics tracking code. Should look something like this UA-12345678-9
-        type: "text"
-      additional_scripts:
+        help_text: Your Google Analytics Tracking ID. Should look something like this UA-12345678-9
+      additional_tags:
         value: ""
         help_text: Insert any additional scripts you have here, ensuring that you include the <code>&lt;script&gt;</code> tags.
         type: "text"
