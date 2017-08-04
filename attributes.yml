@@ -38,10 +38,6 @@ custom_attribute_collections:
         value: <em>Increase your chance of winning</em> by sharing this prize draw with friends!</em>
         help_text: Feel free to change the copy of the referral instructions if you like.
         type: wysiwyg
-      referral_multiplier:
-        value: 3
-        help_text: How many extra entries should your prize draw participants get for each converted referral?
-        type: number
   appearance:
     title: Appearance
     help_title: Change the way your prize draw looks
