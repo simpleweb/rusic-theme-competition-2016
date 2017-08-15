@@ -2,6 +2,7 @@ custom_attribute_collections:
   email:
     title: Email
     help_title: Email
+    help_body: Please make sure all image size is less than 2MB.
     attributes:
       email_confirmation_image:
         value: http://rusic-theme-prize-draw.s3.amazonaws.com/default-prize.png
@@ -41,7 +42,7 @@ custom_attribute_collections:
   appearance:
     title: Appearance
     help_title: Change the way your prize draw looks
-    help_body: You'll want to provide a primary image for both desktop and mobile platforms. If you need your logo present, you'll need to bake this into the images that you upload.<br><br>You can also provide a primary color, we recommend using your brand colors for this.
+    help_body: You'll want to provide a primary image for both desktop and mobile platforms. If you need your logo present, you'll need to bake this into the images that you upload.<br><br>You can also provide a primary color, we recommend using your brand colors for this.<br><br>Please make sure all image size is less than 2MB.
     attributes:
       primary_color:
         value: "#59A7FF"
